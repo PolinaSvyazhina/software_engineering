@@ -2,7 +2,6 @@ import io
 import streamlit as st
 from transformers import pipeline
 from PIL import Image
-# from keras.preprocessing import image
 
 st.header("Классификация ЭКГ")
 
