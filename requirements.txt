@@ -1,5 +1,5 @@
 transformers
 PIL
 fastapi
-pydantic
 uvicorn
+python-multipart
