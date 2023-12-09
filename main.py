@@ -41,5 +41,5 @@ if img is not None:
     img = img.resize((224, 224))
     result = cls(img)
 
-if result is not None:
+if result is not None and img is not None:
     get_label_description(max(result, key=lambda x: x['score'])['label'])
