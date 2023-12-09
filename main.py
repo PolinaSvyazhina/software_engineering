@@ -20,6 +20,8 @@ def get_label_description(label):
             st.title("Неклассифицируемый бит")
         case "M":
             st.title("Инфаркт миокарда")
+        case _:
+            st.title("Неккоректное изображение")
 
 
 def load_image():
