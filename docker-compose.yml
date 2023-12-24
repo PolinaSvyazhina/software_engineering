@@ -1,0 +1,21 @@
+version: "3.7"
+services:
+  api:
+    container_name: myapi
+    build: api/.
+    ports:
+      - "8000:8000"
+    networks:
+      - private
+
+  app:
+    container_name: myapp
+    build: .
+    ports:
+      - "8080:8080"
+    networks:
+      - private
+
+networks:
+  private:
+    driver: bridge
