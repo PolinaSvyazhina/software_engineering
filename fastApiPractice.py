@@ -14,12 +14,7 @@ async def root():
 
 # Получить класс переданного изображения ЭКГ
 @app.post('/predict/')
-async def image_classification(response: Response, file: UploadFile = File(...)):
-    if file.size == 0:
-        response.status_code == status.HTTP_204_NO_CONTENT
-
-        return
-
+async def image_classification(file: UploadFile = File(...)):
     img = Image.open(file.file)
     img = img.resize((224, 224))
     result = cls(img)

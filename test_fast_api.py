@@ -12,4 +12,4 @@ def test_read_main():
 
 def test_predict_empty():
     responses = client.post('/predict/')
-    assert responses.status_code == 204
+    assert responses.status_code == 422
