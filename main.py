@@ -5,7 +5,7 @@ from PIL import Image
 
 st.header("Классификация ЭКГ")
 
-
+# Получить описание предсказанного класса
 def get_label_description(label):
     match label:
         case 'N':
@@ -23,7 +23,7 @@ def get_label_description(label):
         case _:
             st.title("Неккоректное изображение")
 
-
+# Делегат на создание UI аплоудера через SLit
 def load_image():
     uploaded_file = st.file_uploader(
         label='Добавьте изображение'

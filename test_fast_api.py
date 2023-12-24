@@ -10,6 +10,6 @@ def test_read_main():
     assert responses.json() == {'message': 'Hello Word, this is image-classification model'}
 
 
-def test_predict():
+def test_predict_empty():
     responses = client.post('/predict/')
-    assert responses.status_code == 200
+    assert responses.status_code == 204
